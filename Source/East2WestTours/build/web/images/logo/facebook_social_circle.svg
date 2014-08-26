@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>facebook_social_circle</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Facebook" sketch:type="MSLayerGroup">
+            <circle d="M26,52 C40.3594042,52 52,40.3594042 52,26 C52,11.6405958 40.3594042,0 26,0 C11.6405958,0 0,11.6405958 0,26 C0,40.3594042 11.6405958,52 26,52 Z M26,52" id="Button-Shape" fill="#000000" sketch:type="MSShapeGroup" cx="26" cy="26" r="26"/>
+            <path d="M22.0672607,41.005738 L22.0672607,25.9990998 L19.0175171,25.9990997 L19.0175171,21.0247755 L22.0672607,21.0247755 L22.0672607,18.0166016 C22.0672607,13.9590899 23.2803955,11.0332031 27.723022,11.0332031 L33.0081782,11.0332031 L33.0081782,15.9973146 L29.2866206,15.9973146 C27.4229751,15.9973146 26.9982905,17.2357261 26.9982905,18.5325928 L26.9982905,21.0247746 L32.7335,21.0247751 L31.9506831,25.9990998 L26.9982905,25.9990998 L26.9982905,41.0057374 L22.0672607,41.005738 Z M22.0672607,41.005738" id="Icon" fill="#FFFFFF" sketch:type="MSShapeGroup"/>
+        </g>
+    </g>
+</svg>

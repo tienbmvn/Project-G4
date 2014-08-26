@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 25, 2014 4:26:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="g4.east2west.hibernate.objectl.PackageTours" table="PackageTours" schema="dbo" catalog="East2West">
+        <id name="touristId" type="int">
+            <column name="TouristId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="typePackage" class="g4.east2west.hibernate.objectl.TypePackage" fetch="select">
+            <column name="TypeTouris" not-null="true" />
+        </many-to-one>
+        <property name="touristName" type="string">
+            <column name="TouristName" not-null="true" />
+        </property>
+        <property name="touristPlace" type="string">
+            <column name="TouristPlace" not-null="true" />
+        </property>
+         <property name="cityCountry" type="string">
+            <column name="CityCountry" not-null="true" />
+        </property>
+        <property name="touristDescription" type="string">
+            <column name="TouristDescription" not-null="true" />
+        </property>
+        <property name="tourisPrice" type="int">
+            <column name="TourisPrice" not-null="true" />
+        </property>
+        <property name="tourisDuration" type="string">
+            <column name="TourisDuration" not-null="true" />
+        </property>
+        <property name="imagesTouris" type="string">
+            <column name="ImagesTouris" />
+        </property>
+        <set name="packageInfos" table="PackageInfo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PackageTouristId" not-null="true" />
+            </key>
+            <one-to-many class="g4.east2west.hibernate.objectl.PackageInfo" />
+        </set>
+    </class>
+</hibernate-mapping>

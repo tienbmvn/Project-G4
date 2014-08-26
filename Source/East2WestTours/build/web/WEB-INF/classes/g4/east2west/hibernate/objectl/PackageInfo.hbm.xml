@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 25, 2014 4:26:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="g4.east2west.hibernate.objectl.PackageInfo" table="PackageInfo" schema="dbo" catalog="East2West">
+        <id name="infoId" type="int">
+            <column name="InfoId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="packageTours" class="g4.east2west.hibernate.objectl.PackageTours" fetch="select">
+            <column name="PackageTouristId" not-null="true" />
+        </many-to-one>
+        <property name="content" type="string">
+            <column name="Content" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
