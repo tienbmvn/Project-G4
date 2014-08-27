@@ -8,4 +8,6 @@
         <managed-bean-class>g4.east2west.bean.IndexManagedBean</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    
+  
 </faces-config>

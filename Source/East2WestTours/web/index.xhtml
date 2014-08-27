@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Best private tours crafted by handpicked local tour guides - Triip</title>
         <link href="style/header_footer.css" rel="stylesheet" type="text/css"/>
@@ -52,161 +53,14 @@
         <div class = "ii_menu_wr fix_top fw" >
             <div class = "header_menu ii_h" >
                 <div class = "t_l_menu l" >
-                    <a class = "l logo_small" href = "/" >
+                    <a class = "l logo_small" href = "#" >
                         <span class = "triip_logo bl" > </span>
                     </a>
-                    <form class = "search_wr ib l hide_fl" action = "/search/" method = "GET" >
-                        <input class = "long_input l search_input" name = "q" type = "text" placeholder = "Search" value = "" />
-                        <input class = "l search_btn" type = "submit" value = "Search" />
-                    </form>
-                    <div class = "l al top_menu_destination" >
-                        <div class = "ii_dropdown_wr destination_select" >
-                            <div class = "ii_dropdown_2wr l place_disclosure" >
-                                <div class = "mi_wr ii_disclosure disclosure_link" >
-                                    <span class = "b menu_item place_desination bl" >
-                                        <span class = "ellipsis ib place_menu l" >
-                                            Place
-                                        </span>
-                                        <span class = "ib l"> &#x25Be; </span>
-                                    </span>
-                                </div>
-                                <div class="ii_disclosure_list sd place_list" style="display: none;">
-                                    <div class="place_list_wr">
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/vietnam/">Vietnam</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/ho-chi-minh/">Ho Chi Minh</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/ha-noi/">Ha Noi</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/mekong-delta/">Mekong Delta</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/hoi-an/">Hoi An</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/phan-thiet/">Phan Thiet</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/sapa/">Sapa</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/son-la/">Son La</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/quang-binh/">Quang Binh</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/dong-nai/">Dong Nai</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/gia-lai/">Gia Lai</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/hue/">Hue</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/nha-trang/">Nha Trang</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/hai-phong/">Hai Phong</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/can-tho/">Can Tho</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/tay-ninh/">Tay Ninh</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/vung-tau/">Vung Tau</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/da-nang/">Da Nang </a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/da-lat/">Da Lat</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/vietnam/ha-giang/">Ha Giang</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/thailand/">Thailand</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/thailand/bangkok/">Bangkok</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/myanmar/">Myanmar</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/myanmar/yangon/">Yangon</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/indonesia/">Indonesia</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/pontianak/">Pontianak</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/bandung/">Bandung</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/malang/">Malang</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/ujung-pandang/">Ujung Pandang</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/jakarta/">Jakarta</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/surabaya/">Surabaya</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/yogyakarta/">Yogyakarta</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/padang-sidempuan/">Padang Sidempuan</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/indonesia/bali/">Bali</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/china/">China</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/china/hong-kong/">Hong Kong</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/china/guilin/">Guilin</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/peru/">Peru</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/peru/cusco/">Cusco</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/malaysia/">Malaysia</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/ipoh/">Ipoh</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/penang/">Penang</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/malacca/">Malacca</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/kuching/">Kuching</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/kuala-lumpur/">Kuala Lumpur</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/malaysia/petaling-jaya/">Petaling Jaya</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/mongolia/">Mongolia</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/mongolia/ulaanbaatar/">Ulaanbaatar</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/philippines/">Philippines</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/cebu/">Cebu</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/baguio-city/">Baguio City</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/ilocos-norte/">Ilocos Norte</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/boracay/">Boracay</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/bulacan/">Bulacan</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/manila/">Manila</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/philippines/laguna/">Laguna</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/india/">India</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/uttar-pradesh/">Uttar Pradesh</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/orissa/">Orissa</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/assam/">Assam</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/kerala/">Kerala</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/sikkim/">Sikkim</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/rajasthan/">Rajasthan</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/west-bengal/">West Bengal</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/andaman/">Andaman</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/uttarakhand/">Uttarakhand</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/karnataka/">Karnataka</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/goa/">Goa</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/kashmir/">Kashmir</a>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/india/delhi/">Delhi</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/singapore/">Singapore</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/singapore/singapore/">Singapore</a>
-                                        </span>
-                                        <span class="country_wr">
-                                            <b class="">
-                                                <a class="country_item place_item bl ii_item" href="https://www.triip.me/cambodia/">Cambodia</a>
-                                            </b>
-                                            <a class="place_item bl ii_item" href="https://www.triip.me/cambodia/phnom-penh/">Phnom Penh</a>
-                                        </span>
-                                    </div>
-                                    <div class="c"></div>
-                                    <div class="hr trav_request_place hint">
-                                        <p>Can not find your destination?
-                                            <a rel="nofollow" class="clr_ii trav_request" href="https://www.triip.me/users/login/?auth=login&amp;next=/">
-                                                Login to request one
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h:form class = "search_wr ib l hide_fl"  >
+                        <h:inputText class = "long_input l search_input" value ="#{seachManagedBean.countryIndex}" />
+                        <h:commandButton class = "l search_btn" type = "submit" value = "Search" action ="#{seachManagedBean.findPackageContry()}"/>
+                    </h:form>
+                  
                 </div>
             </div>
         </div>
@@ -216,18 +70,60 @@
 
             </div>
         </div>
-        <style>.news_wr{height:40px;padding:26px 0;background:#f4f4f4;}.as_seen_on_wr{height:40px;}.as_seen_on{background:#fff;color:#9e9e9e;padding:5px 20px;line-height:22px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-right:10px;margin-top:4px;font-size:1.1em;margin-left:35px;}.news_logo{margin-right:15px;margin-top:8px;}.news_logo img{height:25px;}</style>
+        <style>.news_wr{height:118px;padding:4px 0;background:#f4f4f4;}.as_seen_on_wr{height:120px;}.as_seen_on{background:#fff;color:#9e9e9e;padding:5px 20px;line-height:22px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-right:10px;margin-top:4px;font-size:1.1em;margin-left:35px;}.news_logo{margin-right:15px;margin-top:8px;}.news_logo img{height:25px;}</style>
         <div class="news_wr fw hide_fl sd">
-            <div class="ii_h al as_seen_on_wr oh">
-                <div class="l as_seen_on">As seen on</div>
-                <a class="news_logo l" href="http://thenextweb.com/asia/2013/08/22/tired-of-getting-scammed-while-traveling-triip-links-tourists-up-with-locals-in-southeast-asia/?fromcat=all" target="_blank"><img src="images/logo/the-next-web.png"/></a>
-                <a class="news_logo l" href="http://ventureburn.com/2013/06/around-the-world-in-7-startups-traveling-ventures-with-a-twist/" target="_blank"><img src="images/logo/ventureburn_v.png"/></a>
-                <a class="news_logo l" href="http://www.techinasia.com/vietnamese-startup-triip-crowdsources-tour-guides-asia/" target="_blank"><img src="images/logo/tech_in_asia_logo.png"/></a>
-                <a class="news_logo l" href="http://www.tnooz.com/2013/05/08/tlabs/triip-wants-to-bridge-local-people-and-travelers-to-create-rich-experience/" target="_blank"><img src="images/logo/tnooz_logo.png"/></a>
-                <a class="news_logo l" href="http://www.forbes.com/sites/yunitaong/2014/06/23/southeast-asias-sharing-economy-start-ups-may-produce-the-next-airbnb-or-uber/" target="_blank"><img style="height:22px;" src="images/logo/forbes_logo.png"/></a>
-                <a class="news_logo l" href="http://e27.co/2013/06/10/triip-a-new-hope-for-vietnam-tourism/" target="_blank"><img src="images/logo/e27_logo.png"/></a>
-                <a class="news_logo l" href="http://www.flightnetwork.com/blog/explore-asian-culture-home-cooking/" target="_blank"><img src="images/logo/FN_Logo.png"/></a>
-                <a class="news_logo l" href="http://saigoneer.com/" target="_blank"><img style="width:110px;height:22px;" src="images/logo/saigoneer-small.png"/></a>
+            <div class="ii_s al as_seen_on_wr oh">
+                <h:form>
+                    <p:tabView>
+                        <p:tab title="Seach Tours">
+                            <h:panelGrid columns="7" cellpadding="30" >
+                                <h:outputText value="Country" />
+                                <p:selectOneMenu id="console" value="#{seachManagedBean.country}"  style="margin-left: 10px;">
+                                    <f:selectItem itemLabel="Select" itemValue="" />
+                                    <f:selectItem itemLabel="Viet Nam" itemValue="Viet Nam" />
+                                    <f:selectItem itemLabel="Thai Lan" itemValue="Thai Lan" />
+                                    <f:selectItem itemLabel="Indonesia" itemValue="Indonesia" />
+                                </p:selectOneMenu>
+                                <h:outputText value="Package"  style="margin-left: 50px;"/>
+                                <p:selectOneMenu id="console1" value="#{seachManagedBean.type}" style="margin-left: 10px;">
+                                    <f:selectItem itemLabel="Select" itemValue="" />
+                                    <f:selectItem itemLabel="Country Tours" itemValue="CWT" />
+                                    <f:selectItem itemLabel="Treks,camps or safaris" itemValue="ATC" />
+                                    <f:selectItem itemLabel="Historical Significance" itemValue="PHS" />
+                                </p:selectOneMenu>
+                                <h:outputText value="Price"  style="margin-left: 50px;"/>
+                                <p:selectOneMenu id="console2" value="#{seachManagedBean.price}" style="margin-left: 10px;">
+                                    <f:selectItem itemLabel="Less Than $50" itemValue="50" />
+                                    <f:selectItem itemLabel="Less Than $100" itemValue="100" />
+                                    <f:selectItem itemLabel="More Than $100" itemValue="300" />
+                                    <f:selectItem itemLabel="Any Price" itemValue="500" />
+                                </p:selectOneMenu>
+                                
+                                <p:commandButton value="Seach" action="#{seachManagedBean.listPackage()}" style="margin-left: 50px;margin-bottom: 5px" ajax="false"/>
+                               
+                            </h:panelGrid>
+
+                        </p:tab>
+                        <p:tab title="Seach Car">
+                            <h:panelGrid columns="2" cellpadding="10">
+
+                                <h:outputText value="Francis Ford Coppola's legendary..." />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Seach Hotel">
+                            <h:panelGrid columns="2" cellpadding="10">
+
+                                <h:outputText value="Francis Ford Coppola's legendary..." />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Seach Flight">
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
+                                <h:outputText value="After a break of more than 15 years..." />
+                            </h:panelGrid>
+                        </p:tab>
+                    </p:tabView>
+                </h:form>
             </div>
         </div>
 
@@ -240,9 +136,9 @@
                         <h:form>
                             Country Wise Tours
                             <span class="s_font ">
-                                <h:commandLink style="color:#47C2CB" action="list.xhtml"
-                                                value="View all &raquo;">
-                                    <f:param name="type" value="CWT" />
+                                <h:commandLink style="color:#47C2CB" action='#{naviManagedBean.naviPackage("CWT")}'
+                                               value="View all &raquo;">
+                                  
                                 </h:commandLink>
                             </span>
                         </h:form>
@@ -298,11 +194,10 @@
                     <div class="c"></div>
                     <h2 class="al feature_bar home_featured_bar">
                         <h:form>
-                           Activity based like treks, camps or safaris
+                            Activity based like treks, camps or safaris
                             <span class="s_font ">
-                                <h:commandLink style="color:#47C2CB" action="list.xhtml"
-                                                value="View all &raquo;">
-                                    <f:param name="type" value="ATC" />
+                               <h:commandLink style="color:#47C2CB" action='#{naviManagedBean.naviPackage("ATC")}'
+                                               value="View all &raquo;">
                                 </h:commandLink>
                             </span>
                         </h:form>
@@ -349,20 +244,18 @@
                             </div>
                             <div style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal"></div>
                             <div disabled="disabled" style="display: block;" class="jcarousel-next jcarousel-next-horizontal jcarousel-next-disabled jcarousel-next-disabled-horizontal">
-
                             </div>
-
                         </div>
                     </div>
 
                     <div class="c"></div>
                     <h2 class="al feature_bar home_featured_bar">
                         <h:form>
-                          Places of historical significance
+                            Places of historical significance
                             <span class="s_font ">
-                                <h:commandLink style="color:#47C2CB" action="list.xhtml"
-                                                value="View all &raquo;">
-                                    <f:param name="type" value="PHS" />
+                                 <h:commandLink style="color:#47C2CB" action='#{naviManagedBean.naviPackage("PHS")}'
+                                               value="View all &raquo;">
+                                  
                                 </h:commandLink>
                             </span>
                         </h:form>

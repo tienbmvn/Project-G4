@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tien/Desktop/Project-s4/Source/East2WestTours/web/list.xhtml</file>
-            <file>file:/C:/Users/Tien/Desktop/Project-s4/Source/East2WestTours/src/java/g4/east2west/model/DataManager.java</file>
-            <file>file:/C:/Users/Tien/Desktop/Project-s4/Source/East2WestTours/src/java/g4/east2west/model/Test.java</file>
-            <file>file:/C:/Users/Tien/Desktop/Project-s4/Source/East2WestTours/src/java/g4/east2west/bean/IndexManagedBean.java</file>
-            <file>file:/C:/Users/Tien/Desktop/Project-s4/Source/East2WestTours/web/index.xhtml</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/src/java/g4/east2west/model/DataManager.java</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/web/index.xhtml</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/web/list.xhtml</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/web/listpackage.xhtml</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/src/java/g4/east2west/bean/SeachManagedBean.java</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/src/java/g4/east2west/bean/NaviManagedBean.java</file>
+            <file>file:/C:/Users/Tien/Desktop/Project-G4/Source/East2WestTours/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>

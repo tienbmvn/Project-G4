@@ -7,32 +7,48 @@
 package g4.east2west.bean;
 
 import g4.east2west.hibernate.objectl.PackageTours;
+import g4.east2west.hibernate.objectl.TypePackage;
 import g4.east2west.model.DataManager;
+import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+
 
 /**
  *
  * @author Tien
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class NaviManagedBean {
 
     private DataManager manager;
     private List<PackageTours> listPk;
-      @ManagedProperty(value="#{param.type}")
-    private String type;
+    private TypePackage nameType;
 
-    public String getType() {
-        return type;
+   
+
+   
+    public TypePackage getNameType() {
+        return nameType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setNameType(TypePackage nameType) {
+        this.nameType = nameType;
     }
+    
+//    @ManagedProperty(value="#{param.type}")
+//    private String type;
+//
+//    public String getType() {
+//        return type;
+//    }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
       
     public List<PackageTours> getListPk() {
         return listPk;
@@ -44,14 +60,17 @@ public class NaviManagedBean {
     
     public NaviManagedBean() {
         manager = new DataManager();
+      
     }
     
 //    public String naviPackage(String type){
 //        listPk=manager.getListPackage(type);
 //        return "list.xhtml";
 //    }
-      public List<PackageTours> naviPackage(){
+      public String naviPackage(String type){
         listPk=manager.getListPackage(type);
-        return listPk;
+        nameType = manager.findTypePackage(type);
+        return "list?faces-redirect=true";
     }
+      
 }

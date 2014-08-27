@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Best private tours crafted by handpicked local tour guides - Triip</title>
+        <link href="style/header_footer.css" rel="stylesheet" type="text/css"/>
+        <link href="style/common.css" rel="stylesheet" type="text/css"/>
+        <link href="style/triip.css" rel="stylesheet" type="text/css"/>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/triip.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/jquery_002.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($(window).width() > 640) {
+                    scrollAddClass('.header_menu', 'header_menu_scroll');
+                    $(window).scroll(function() {
+                        scrollAddClass('.header_menu', 'header_menu_scroll');
+                    });
+                }
+
+                $('.ii_dropdown_2wr').live('click', function() {
+                    if ($(this).hasClass('ii_dropdown_wr_selected')) {
+                        $(this).find('.ii_disclosure_list').fadeOut();
+                        $(this).removeClass('ii_dropdown_wr_selected');
+                    } else {
+                        $('.ii_disclosure_list').fadeOut();
+                        $('.ii_dropdown_2wr').removeClass('ii_dropdown_wr_selected');
+                        $(this).find('.ii_disclosure_list').fadeIn();
+                        $(this).addClass('ii_dropdown_wr_selected');
+                    }
+                });
+
+                var bg_urls = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg", "images/6.jpg", "images/7.jpg", "images/8.jpg", "images/9.jpg", "images/10.jpg"];
+                var bg_number = Math.floor(Math.random() * bg_urls.length);
+                $('.ii_banner').css("background-image", "url(" + bg_urls[bg_number] + ")");
+                $('.ii_banner').addClass('bg_' + bg_number);
+                $('.tb_cover_wr').hover(function() {
+                    $(this).find('.tb_desc').fadeToggle();
+                });
+            });
+        </script>  
+    </h:head>
+    <h:body>
+        <div class = "ii_menu_wr fix_top fw" >
+            <div class = "header_menu ii_h" >
+                <div class = "t_l_menu l" >
+                    <a class = "l logo_small" href = "index.xhtml" >
+                        <span class = "triip_logo bl" > </span>
+                    </a>
+                    <h:form class = "search_wr ib l hide_fl"  >
+                        <h:inputText class = "long_input l search_input" value ="#{seachManagedBean.name}" />
+                        <h:commandButton class = "l search_btn" type = "submit" value = "Search" action ="#{seachManagedBean.findPackageByName()}"/>
+                    </h:form>
+
+                </div>
+            </div>
+        </div>
+        <div id="banner_wrap" class="ii_banner fw home_banner">
+            <div class="banner ii_h ac">
+                <div class="ac clr_FFF search_intro mar0_fl">
+                    <a href="https://www.triip.me/"><img src="images/triip_logo.svg" height="100" width="100"/></a>
+                    <p class="pad20_0 search_in pad10_0_fl">_ in _ </p>
+                </div>
+                <div class="ac search_result_banner">
+                    <div class="ii_dropdown_wr banner_des_select ib">
+                        <div class="ii_dropdown_2wr place_disclosure">
+                            <div class="ii_disclosure disclosure_link">
+                                <h1 class="clr_FFF txt_sd">#{seachManagedBean.country}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>.news_wr{height:118px;padding:4px 0;background:#f4f4f4;}.as_seen_on_wr{height:120px;}.as_seen_on{background:#fff;color:#9e9e9e;padding:5px 20px;line-height:22px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-right:10px;margin-top:4px;font-size:1.1em;margin-left:35px;}.news_logo{margin-right:15px;margin-top:8px;}.news_logo img{height:25px;}</style>
+        <div class="news_wr fw hide_fl sd">
+            <div class="ii_s al as_seen_on_wr oh">
+                <h:form>
+                    <p:tabView>
+                        <p:tab title="Seach Tours">
+                               <h:panelGrid columns="7" cellpadding="30" >
+                                <h:outputText value="Country" />
+                                <p:selectOneMenu id="console" value="#{seachManagedBean.country}"  style="margin-left: 10px;">
+                                    <f:selectItem itemLabel="Select" itemValue="" />
+                                    <f:selectItem itemLabel="Viet Nam" itemValue="Viet Nam" />
+                                    <f:selectItem itemLabel="Thai Lan" itemValue="Thai Lan" />
+                                    <f:selectItem itemLabel="Indonesia" itemValue="Indonesia" />
+                                </p:selectOneMenu>
+                                <h:outputText value="Package"  style="margin-left: 50px;"/>
+                                <p:selectOneMenu id="console1" value="#{seachManagedBean.type}" style="margin-left: 10px;">
+                                   <f:selectItem itemLabel="Select" itemValue="" />
+                                    <f:selectItem itemLabel="Country Tours" itemValue="CWT" />
+                                    <f:selectItem itemLabel="Treks,camps or safaris" itemValue="ATC" />
+                                    <f:selectItem itemLabel="Historical Significance" itemValue="PHS" />
+                                </p:selectOneMenu>
+                                <h:outputText value="Price"  style="margin-left: 50px;"/>
+                                <p:selectOneMenu id="console2" value="#{seachManagedBean.price}" style="margin-left: 10px;">
+                                    <f:selectItem itemLabel="Less Than $50" itemValue="50" />
+                                    <f:selectItem itemLabel="Less Than $100" itemValue="100" />
+                                    <f:selectItem itemLabel="More Than $100" itemValue="300" />
+                                    <f:selectItem itemLabel="Any Price" itemValue="500" />
+                                </p:selectOneMenu>
+                                
+                                <p:commandButton value="Seach" actionListener="#{seachManagedBean.listPackageS()}" style="margin-left: 50px;margin-bottom: 5px" ajax="false"/>
+                               
+                            </h:panelGrid>
+
+                        </p:tab>
+                        <p:tab title="Seach Car">
+                            <h:panelGrid columns="2" cellpadding="10">
+
+                                <h:outputText value="Francis Ford Coppola's legendary..." />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Seach Hotel">
+                            <h:panelGrid columns="2" cellpadding="10">
+
+                                <h:outputText value="Francis Ford Coppola's legendary..." />
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Seach Flight">
+                            <h:panelGrid columns="2" cellpadding="10">
+                                <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
+                                <h:outputText value="After a break of more than 15 years..." />
+                            </h:panelGrid>
+                        </p:tab>
+                    </p:tabView>
+                </h:form>
+            </div>
+        </div>
+        <div class="ii_content_wr fw ">
+            <div class=" ii_h">
+                <div class="triip_breadcrumb home_featured_bar">
+                </div>
+                <div id="triip_list_wr">
+                    <div>
+                        <h2 class="al feature_bar home_featured_bar">
+                            #{naviManagedBean.nameType.packageName}
+                        </h2>
+
+                        <div class="ac_fl no_slide_list triip_slideshow pr">
+
+                            <ul class="jcarousel">
+                                <h:form id="form">
+                                    <p:dataGrid var="p" value="#{seachManagedBean.list}" columns="3" 
+                                                rows="9" paginator="true" paginatorPosition="bottom"
+                                                paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                                >
+                                        <li jcarouselindex="1" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" style="width: 308px; float: left; list-style: none outside none;">
+                                            <div class="triip_box l pr rb10">
+                                                <div class="tb_wrap oh rb10">
+                                                    <div>
+                                                        <a href="/sapa/hmong-authentic-sin-chai-village-adventuring-with-kids-23/" class="bl crop pr tb_cover_wr">
+                                                            <div class="tb_img" style="background-image: url('#{p.imagesTouris}')"></div>
+                                                            <div class="r tb_price pa ">
+                                                                <div class="price_wr ">
+                                                                    From
+                                                                    <b class="price">$#{p.tourisPrice}</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="fw tb_title_wr pa">
+                                                                <h4 class="tb_title">
+                                                                    <h:outputText value="#{p.touristName}"/>
+                                                                    <i class="errors">
+                                                                    </i>
+                                                                </h4>
+                                                            </div>
+                                                            <div style="display:none" class="tb_desc oh crop">
+                                                                <p>#{p.touristDescription}</p>
+                                                            </div>
+                                                        </a>
+                                                        <a class="tb_creator_info bl w_bg" href="/users/194/profile">
+
+                                                            <p class="tb_creator_name">City <b>#{p.cityCountry}</b></p>
+                                                        </a>
+                                                        <div class="tb_info">
+                                                            <a href="#" class="tb_place">#{p.touristPlace}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </p:dataGrid>
+                                </h:form>
+                            </ul>
+                        </div>
+
+                        <br class="c"/>
+                        <div class="pagination ac mar20_0">
+                            <span class="step-links">
+                            </span>
+
+                        </div>
+                    </div>
+                    <script>
+
+                    </script>
+                </div>
+                <br class="c"/>
+            </div>
+        </div>
+
+        <div class="footer_wr fw">
+            <div class="footer ii_h ac_fl pr">
+                <div class="pr">
+                    <div class="r footer_menu txt_menu triip_fl">
+                        <a class="footer_item" href="https://static.triip.me/The_Triip_Book_1.0.pdf">Triip Book</a>
+                        <a class="footer_item" href="/wiki-triip/">Wiki Triip</a>
+                        <a class="footer_item" href="/blog/">Blog</a>
+                        <a class="footer_item" href="/about-us/">About us</a>
+                        <a class="footer_item" href="/contact-us/">Contact</a>
+                        <a class="footer_item" href="/faqs/">FAQs</a>
+                        <a class="footer_item" href="/terms-of-service/">Policies</a>
+                    </div>
+                    <div class="l triip_fl">
+                        <div class="l footer_parner triip_fl">
+                            <div>Partners</div>
+                            <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics"/></a>
+                        </div>
+                        <div class="soccial_footer l triip_fl">
+                            <div>Find us on</div>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://www.facebook.com/triip.me">
+                                <img src="images/logo/facebook_social_circle.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item first img_menu" href="http://twitter.com/triipme">
+                                <img src="images/logo/twitter_social_circle.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="publisher" class="footer_item img_menu" href="https://plus.google.com/117155709114209869218/posts">
+                                <img src="images/logo/google_plus_social_circle.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://pinterest.com/triipme/">
+                                <img src="images/logo/pinterest_social_circle.svg" width="36" height="36"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="triip_fl r"><span class=" ">©2013 Triip Corp. All rights reserved.</span></div>
+                    <div class="c"></div>
+                </div>
+                <div class="c"></div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
