@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 25, 2014 11:51:24 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entities.TypePackage" table="TypePackage" schema="dbo" catalog="East2West">
+        <id name="typeTourisId" type="serializable">
+            <column name="TypeTourisId" />
+            <generator class="assigned" />
+        </id>
+        <property name="packageName" type="string">
+            <column name="PackageName" not-null="true" />
+        </property>
+        <set name="packageTourses" table="PackageTours" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TypeTouris" not-null="true" />
+            </key>
+            <one-to-many class="entities.PackageTours" />
+        </set>
+    </class>
+</hibernate-mapping>
